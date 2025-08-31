@@ -28,3 +28,11 @@ while player1 and player2:  # while both players have cards
     else:
         print("Tie! Both cards discarded\n")
         # do nothing (cards are discarded)
+
+# Determine winner
+if player1:
+    print("🎉 Player 1 wins the game!")
+else:
+    print("🎉 Player 2 wins the game!")
+        # do nothing (cards are discarded)
+
