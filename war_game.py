@@ -9,3 +9,22 @@ random.shuffle(deck)
 # Split into two players
 player1 = deck[:26]
 player2 = deck[26:]
+
+round_num = 0
+
+while player1 and player2:  # while both players have cards
+    round_num += 1
+    card1 = player1.pop(0)   # take top card
+    card2 = player2.pop(0)
+
+    print(f"Round {round_num}: Player 1 plays {card1}, Player 2 plays {card2}")
+
+    if card1 > card2:
+        player1.extend([card1, card2])   # winner gets both cards
+        print("Player 1 wins the round\n")
+    elif card2 > card1:
+        player2.extend([card1, card2])
+        print("Player 2 wins the round\n")
+    else:
+        print("Tie! Both cards discarded\n")
+        # do nothing (cards are discarded)
